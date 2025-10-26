@@ -3,7 +3,7 @@ import React from 'react';
 import {
   SignUpButton,
 } from "@clerk/nextjs";
-import { Button } from '../button';
+import { Button } from '../ui/button';
 import { Stethoscope, CalendarCheck, Mic, Star } from 'lucide-react';
 
 const Hero = () => {

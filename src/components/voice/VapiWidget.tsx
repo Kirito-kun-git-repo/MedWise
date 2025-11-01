@@ -157,7 +157,7 @@ function VapiWidget() {
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-primary/5"></div>
                 <Image
                   src="/logo.png"
-                  alt="AI Dental Assistant"
+                  alt="AI Health Assistant"
                   width={80}
                   height={80}
                   className="w-20 h-20 object-contain"
@@ -231,7 +231,7 @@ function VapiWidget() {
             {messages.map((msg, index) => (
               <div key={index} className="message-item animate-in fade-in duration-300">
                 <div className="font-semibold text-xs text-muted-foreground mb-1">
-                  {msg.role === "assistant" ? "DentWise AI" : "You"}:
+                  {msg.role === "assistant" ? "MedWise AI" : "You"}:
                 </div>
                 <p className="text-foreground">{msg.content}</p>
               </div>

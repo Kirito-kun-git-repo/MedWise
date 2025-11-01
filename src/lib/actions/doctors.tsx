@@ -122,3 +122,27 @@ export async function updateDoctor(input: UpdateDoctorInput) {
     }
 
 }
+
+export async function getAvailableDoctors() {
+    try{
+        const doctors=await prisma.doctor.findMany({
+            where:{isActive:true},
+            include:{
+                _count:{
+                    select:{Appointment:true,}
+                },
+            },
+            orderBy:{createdAt:'asc'},
+        });
+        return doctors.map((doctor)=>({
+            ...doctor,
+            appointmentsCount:doctor._count.Appointment,
+
+        }));
+
+    }catch(err){
+        console.log("Error fetching available doctors:",err);
+        throw new Error("Could not fetch available doctors");
+
+    }
+}

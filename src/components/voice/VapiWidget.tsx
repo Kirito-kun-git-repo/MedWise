@@ -39,6 +39,7 @@ function VapiWidget() {
       setConnecting(false);
       setIsSpeaking(false);
       setCallEnded(true);
+      setTimeout(() => setCallEnded(false), 3000);
     };
 
     const handleSpeechStart = () => {

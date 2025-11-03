@@ -2,6 +2,7 @@
 
 import { auth } from "@clerk/nextjs/server";
 import { prisma } from "../prisma";
+import { Appointment, AppointmentStatus } from "@prisma/client";
 
 
 function transformAppointment(appointment: any) {
@@ -38,7 +39,7 @@ export async function getAppointments() {
             orderBy:{createdAt:'desc'}
 
         });
-        return appoinments;
+        return appoinments.map(transformAppointment);
 
     }
     catch(err){
@@ -181,4 +182,23 @@ export async function bookAppointment(input:BookAppointmentInput){
 
     }
 
+}
+
+export async function UpdateAppointmentStatus(input:{id:string; status:AppointmentStatus}) {
+    try{
+        const appointment=await prisma.appointment.update({
+            where :{
+                id:input.id
+            },
+            data:{
+                status:input.status
+            }
+        });
+        return appointment;
+    }
+    catch(err){
+        console.log("Error updating appointment status:",err);
+        throw new Error("Could not update appointment status");
+    }
+    
 }

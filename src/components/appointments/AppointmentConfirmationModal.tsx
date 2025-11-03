@@ -52,6 +52,7 @@ export function AppointmentConfirmationModal({
                 alt="Email sent"
                 width={120}
                 height={120}
+                unoptimized
                 className="mx-auto"
               />
             </div>

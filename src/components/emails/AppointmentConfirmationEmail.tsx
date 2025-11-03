@@ -73,7 +73,7 @@ function AppointmentConfirmationEmail({
             <Text style={detailValue}>{price}</Text>
 
             <Text style={detailLabel}>Location</Text>
-            <Text style={detailValue}>Dental Center</Text>
+            <Text style={detailValue}>Medical Center</Text>
           </Section>
 
           <Text style={text}>

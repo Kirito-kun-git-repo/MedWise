@@ -7,6 +7,7 @@ import { useGetDoctors } from '@/hooks/use-doctors';
 import { useGetAppointments } from '@/hooks/use-appointments';
 import AdminStats from '@/components/admin/AdminStats';
 import DoctorsManagement from '@/components/admin/DoctorsManagement';
+import RecentAppointments from '@/components/admin/RecentAppointments';
 
 
 const AdminDashboardClient = () => {
@@ -44,7 +45,7 @@ const AdminDashboardClient = () => {
                                 Welcome back, {user?.firstName || "Admin"}!
                             </h1>
                             <p className="text-muted-foreground">
-                                Manage doctors, oversee appointments, and monitor your dental practice performance.
+                                Manage doctors, oversee appointments, and monitor your medical practice performance.
                             </p>
                         </div>
                     </div>
@@ -62,6 +63,8 @@ const AdminDashboardClient = () => {
                     completedAppointments={stats.completedAppointments}
                 />
                 <DoctorsManagement  />
+                <RecentAppointments />
+                
 
 
             </div>

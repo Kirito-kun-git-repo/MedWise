@@ -23,7 +23,7 @@ export default async function WelcomeSection() {
             , {user?.firstName}!
           </h1>
           <p className="text-muted-foreground">
-            Your personal AI dental assistant is ready to help you maintain perfect oral health.
+            Your personal AI medical assistant is ready to help you maintain perfect oral health.
           </p>
         </div>
       </div>

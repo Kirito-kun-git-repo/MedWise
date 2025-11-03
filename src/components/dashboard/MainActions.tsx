@@ -17,7 +17,7 @@ export default function MainActions() {
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-2">AI Voice Assistant</h3>
-              <p className="text-muted-foreground">Get instant dental advice through voice calls</p>
+              <p className="text-muted-foreground">Get instant medical advice through voice calls</p>
             </div>
           </div>
 
@@ -28,7 +28,7 @@ export default function MainActions() {
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
-              <span className="text-sm">Professional dental guidance</span>
+              <span className="text-sm">Professional medical guidance</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -67,7 +67,7 @@ export default function MainActions() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
-              <span className="text-sm">Verified dental professionals</span>
+              <span className="text-sm">Verified medical professionals</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-primary rounded-full"></div>

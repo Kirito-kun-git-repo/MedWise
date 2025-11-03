@@ -47,6 +47,7 @@ function DoctorSelectionStep({
                   alt={doctor.name}
                   width={64}
                   height={64}
+                  unoptimized
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div className="flex-1">
@@ -77,7 +78,7 @@ function DoctorSelectionStep({
                 <span>{doctor.phone}</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                {doctor.bio || "Experienced dental professional providing quality care."}
+                {doctor.bio || "Experienced medical professional providing quality care."}
               </p>
               <Badge variant="secondary">Licensed Professional</Badge>
             </CardContent>

@@ -31,6 +31,8 @@ export function useUpdateDoctor() {
         onSuccess: () => {
             //invalidate and refetch the doctors list after a successful creation of new doctor
             queryClient.invalidateQueries({queryKey:['getDoctors']});
+            queryClient.invalidateQueries({queryKey:['getAvailableDoctors']});
+
         },
         onError: (error) => console.log("Error updating doctor:", error)
     });

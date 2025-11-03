@@ -1,6 +1,6 @@
 "use client"
 
-import { bookAppointment, getAppointments, getBookedTimeSlots, getUserAppointments } from "@/lib/actions/appointments"
+import { bookAppointment, getAppointments, getBookedTimeSlots, getUserAppointments, UpdateAppointmentStatus } from "@/lib/actions/appointments"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 
 
@@ -42,6 +42,18 @@ export function useUserAppointments(){
     return results;
 
 }
+export function useUpdateAppointmentStatus(){
+    const queryClient=useQueryClient();
+    return useMutation({
+        mutationFn: UpdateAppointmentStatus,
+        onSuccess:()=>{
+            //invalidate and refetch the appointments list after updating status
+            queryClient.invalidateQueries({queryKey:['getAppointments']});
+        },
+        onError:(error)=>console.log("Error updating appointment status:",error)
+    })
+}
+
 
 
  

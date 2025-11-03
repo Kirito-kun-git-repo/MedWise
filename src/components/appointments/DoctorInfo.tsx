@@ -14,6 +14,7 @@ function DoctorInfo({ doctorId }: { doctorId: string }) {
         alt={doctor.name}
         width={48}
         height={48}
+        unoptimized
         className="w-12 h-12 rounded-full object-cover"
       />
       <div>

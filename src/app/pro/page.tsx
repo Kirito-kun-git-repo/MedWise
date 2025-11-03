@@ -26,10 +26,10 @@ async function ProPage() {
               </div>
 
               <div>
-                <h1 className="text-4xl font-bold mb-2">Unlock Premium AI Dental Care</h1>
+                <h1 className="text-4xl font-bold mb-2">Unlock Premium AI Medical Care</h1>
                 <p className="text-muted-foreground">
                   Get unlimited AI consultations, advanced features, and priority support to take
-                  your dental health to the next level.
+                  your medical health to the next level.
                 </p>
               </div>
             </div>
@@ -47,7 +47,7 @@ async function ProPage() {
           <div className="text-center space-y-4">
             <h2 className="text-3xl font-bold">Choose Your Plan</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Select the perfect plan for your dental care needs. All plans include secure access
+              Select the perfect plan for your medical care needs. All plans include secure access
               and bank-level encryption.
             </p>
           </div>

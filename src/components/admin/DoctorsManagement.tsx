@@ -60,6 +60,7 @@ function DoctorsManagement() {
                     alt={doctor.name}
                     width={48}
                     height={48}
+                    unoptimized
                     className="size-12 rounded-full object-cover ring-2 ring-background"
                   />
 

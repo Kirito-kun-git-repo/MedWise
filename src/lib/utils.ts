@@ -5,13 +5,20 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function generateAvatar(name: string, gender: "MALE" | "FEMALE") {
+export function generateAvatar(
+  name: string,
+  gender: "MALE" | "FEMALE"
+) {
   const username = name.replace(/\s+/g, "").toLowerCase();
-  const base = "https://avatar.iran.liara.run/public";
-  if (gender === "FEMALE") return `${base}/girl?username=${username}`;
-  // default to boy
-  return `${base}/boy?username=${username}`;
+  const style = gender === "FEMALE" ? "female" : "male"; // or pick style variation
+  const base = "https://api.dicebear.com/6.x/avataaars/svg";
+  const params = new URLSearchParams({
+    seed: username + "_" + style,
+    // you can add more options like hairColor, accessories, etc
+  });
+  return `${base}?${params.toString()}`;
 }
+
 export const formatPhoneNumber = (value: string) => {
   if (!value) return value;
 
